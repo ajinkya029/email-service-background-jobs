@@ -1,0 +1,1 @@
+const mongoose=require("mongoose"); const {mongoUri}=require("./env"); async function connectMongo(){if(mongoUri){await mongoose.connect(mongoUri);console.log("[mongo] connected")}} module.exports={connectMongo};

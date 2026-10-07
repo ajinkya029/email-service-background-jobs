@@ -1,0 +1,3 @@
+require("dotenv").config();
+const required=["MONGO_URI","REDIS_URL","SMTP_HOST","SMTP_USER","SMTP_PASS","EMAIL_FROM"]; required.forEach(k=>{if(!process.env[k]) console.warn(`[env] Missing ${k}`)});
+module.exports={nodeEnv:process.env.NODE_ENV||"development",port:+(process.env.PORT||5000),mongoUri:process.env.MONGO_URI,redisUrl:process.env.REDIS_URL,smtp:{host:process.env.SMTP_HOST,port:+(process.env.SMTP_PORT||587),secure:process.env.SMTP_SECURE==="true",user:process.env.SMTP_USER,pass:process.env.SMTP_PASS},emailFrom:process.env.EMAIL_FROM,apiKey:process.env.API_KEY,queue:{maxAttempts:+(process.env.EMAIL_MAX_ATTEMPTS||5),backoffDelay:+(process.env.EMAIL_BACKOFF_DELAY||5000)}};

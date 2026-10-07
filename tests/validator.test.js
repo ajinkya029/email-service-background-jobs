@@ -1,0 +1,1 @@
+const test=require("node:test"),assert=require("node:assert/strict"),{emailSchema}=require("../src/validators/email.validator"); test("valid email",()=>assert.equal(emailSchema.safeParse({to:"test@example.com",subject:"Hi",html:"<h1>Hi</h1>"}).success,true)); test("requires body",()=>assert.equal(emailSchema.safeParse({to:"test@example.com",subject:"Hi"}).success,false));

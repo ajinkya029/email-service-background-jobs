@@ -1,0 +1,1 @@
+const {apiKey}=require("../config/env"); function apiKeyAuth(req,res,next){if(!apiKey)return next();if(req.get("x-api-key")!==apiKey)return res.status(401).json({success:false,message:"Invalid or missing API key"});next()} module.exports={apiKeyAuth};

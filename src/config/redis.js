@@ -1,0 +1,1 @@
+const Redis=require("ioredis"); const {redisUrl}=require("./env"); const createRedisConnection=()=>new Redis(redisUrl,{maxRetriesPerRequest:null,enableReadyCheck:false}); module.exports={createRedisConnection};

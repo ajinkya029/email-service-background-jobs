@@ -1,0 +1,1 @@
+const router=require("express").Router(); const {queueEmail,getEmailStatus}=require("../controllers/email.controller"); router.post("/",queueEmail); router.get("/:jobId",getEmailStatus); module.exports=router;

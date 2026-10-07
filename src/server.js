@@ -1,0 +1,1 @@
+const app=require("./app"),{port}=require("./config/env"),{connectMongo}=require("./config/mongo"); connectMongo().then(()=>app.listen(port,()=>console.log(`[api] listening on http://localhost:${port}`))).catch(e=>{console.error(e);process.exit(1)});
