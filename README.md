@@ -251,7 +251,7 @@ You can use:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/email-service-background-jobs.git
+git clone https://github.com/ajinkya029/email-service-background-jobs.git
 ```
 
 Navigate into the project:
